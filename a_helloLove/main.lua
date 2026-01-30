@@ -20,6 +20,13 @@ while (number > 0) do
     number = number - 1;
 end
 
+local sum = 0;
+-- loop from 1 to 67, each time increment by 1 unit
+for i=1, 67, 1 do
+    sum = sum + i;
+end
+
+
 function love.draw()
     love.graphics.setFont(love.graphics.newFont(30));
     -- love.graphics.print(text, x, y)
@@ -29,4 +36,5 @@ function love.draw()
     love.graphics.print("string: " .. message .. "\n" .. "number: " .. number, 10, 120);
     love.graphics.print("date: " ..currentDateTime, 10, 143);
     love.graphics.print("date: " ..response, 10, 190);
+    love.graphics.print("the sum from 1 to 67 is: "..sum, 10, 220);
 end
