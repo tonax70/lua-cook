@@ -4,6 +4,7 @@ local number = 67; -- number
 local currentDateTime = os.date();
 local response = "";
 
+
 -- conditions
 
 if (number == 67) then
@@ -51,6 +52,20 @@ table.insert(arr, "SRA");
 arr["SKSST"] = "goated";
 arr[arr[1]] = 800; -- wut da is real
 
+-- loop through a table
+local goated = {'n', 'a', 's', '-', 'o','k','e','S'};
+
+--[[
+ In Lua, ipairs() is a built-in function used in a for loop to iterate
+ over the integer keys of a table in sequential order,
+ starting from index 1 and stopping at the first nil value encountered.
+ The "i" in ipairs stands for "index". 
+]]
+local out = "";
+for i, str in ipairs(goated) do
+    out = out..str;
+end
+
 function love.draw()
     love.graphics.setFont(love.graphics.newFont(30));
     -- love.graphics.print(text, x, y)
@@ -64,4 +79,5 @@ function love.draw()
     lp("array test: ".. arr[4], 10, 250);
     lp("array test: ".. arr["SKS"], 10, 280);
     lp("array test: ".. arr["SKSST"], 10, 300);
+    lp("array result: "..out, 10, 320)
 end
