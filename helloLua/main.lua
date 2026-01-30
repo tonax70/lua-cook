@@ -1,3 +1,5 @@
+local love = require("love");
+
 local message = "I cook lua\n"; -- string
 local number = 67; -- number
 local currentDateTime = os.date();
@@ -5,8 +7,8 @@ local response = "";
 
 -- conditions
 
-if (number == 67) then 
-    response="uh uh whish i wish i knew knew knew knew";
+if (number == 67) then
+    response="ooh ooh whish i wish i knew knew knew knew";
 elseif (number == 87) then
     response="is that the bite of 87?";
 else
@@ -21,6 +23,7 @@ while (number > 0) do
 end
 
 local sum = 0;
+
 -- loop from 1 to 67, each time increment by 1 unit
 for i=1, 67, 1 do
     sum = sum + i;
