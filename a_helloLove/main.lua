@@ -1,10 +1,14 @@
-message = "I cook lua\n"; -- string
-number = 67; -- number
+local message = "I cook lua\n"; -- string
+local number = 67; -- number
 local currentDateTime = os.date();
-response = "";
+local response = "";
 
 if (number == 67) then 
     response="uh uh whish i wish i knew knew knew knew";
+elseif (number == 87) then
+    response="is that the bite of 87?";
+else
+    response="L number";
 end
 
 function love.draw()
