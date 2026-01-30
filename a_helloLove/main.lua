@@ -3,12 +3,21 @@ local number = 67; -- number
 local currentDateTime = os.date();
 local response = "";
 
+-- conditions
+
 if (number == 67) then 
     response="uh uh whish i wish i knew knew knew knew";
 elseif (number == 87) then
     response="is that the bite of 87?";
 else
     response="L number";
+end
+
+-- loops
+
+while (number > 0) do
+    response= response.." loop";
+    number = number - 1;
 end
 
 function love.draw()
