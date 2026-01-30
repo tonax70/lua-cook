@@ -66,6 +66,14 @@ for i, str in ipairs(goated) do
     out = out..str;
 end
 
+-- boolean
+local isGoated = true;
+
+local checklor = function(goat)
+if (goat) then return "Yes, "..out.." is goated!"; end
+return out.." is always goated.";
+end
+
 function love.draw()
     love.graphics.setFont(love.graphics.newFont(30));
     -- love.graphics.print(text, x, y)
@@ -79,5 +87,6 @@ function love.draw()
     lp("array test: ".. arr[4], 10, 250);
     lp("array test: ".. arr["SKS"], 10, 280);
     lp("array test: ".. arr["SKSST"], 10, 300);
-    lp("array result: "..out, 10, 320)
+    lp("array result: "..out, 10, 320);
+    lp("isGoated?: "..checklor(isGoated), 10, 370);
 end
