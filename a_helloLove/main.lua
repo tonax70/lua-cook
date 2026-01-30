@@ -1,5 +1,6 @@
 message = "I cook lua\n"; -- string
 number = 67; -- number
+local currentDateTime = os.date()
 
 function love.draw()
     love.graphics.setFont(love.graphics.newFont(30))
@@ -8,4 +9,5 @@ function love.draw()
     love.graphics.setFont(love.graphics.newFont(20))
     love.graphics.print("lua variables:", 10, 70) 
     love.graphics.print("string: " .. message .. "\n" .. "number: " .. number, 10, 120)
+    love.graphics.print("date: " ..currentDateTime, 10, 143)
 end
