@@ -1,3 +1,4 @@
 function love.draw()
-    love.graphics.print( "Hello LOVE ");
+    love.graphics.setFont(love.graphics.newFont(50));
+    love.graphics.print( "Hello");
 end
