@@ -1,5 +1,4 @@
 local love = require("love");
-
 local message = "I cook lua\n"; -- string
 local number = 67; -- number
 local currentDateTime = os.date();
@@ -29,6 +28,9 @@ for i=1, 67, 1 do
     sum = sum + i;
 end
 
+local function lp (message, x, y)
+    love.graphics.print(message, x, y);
+end
 
 function love.draw()
     love.graphics.setFont(love.graphics.newFont(30));
@@ -38,6 +40,6 @@ function love.draw()
     love.graphics.print("lua variables:", 10, 70) ;
     love.graphics.print("string: " .. message .. "\n" .. "number: " .. number, 10, 120);
     love.graphics.print("date: " ..currentDateTime, 10, 143);
-    love.graphics.print("date: " ..response, 10, 190);
-    love.graphics.print("the sum from 1 to 67 is: "..sum, 10, 220);
+    lp("date: " ..response, 10, 190);
+    lp("the sum from 1 to 67 is: "..sum, 10, 220);
 end
