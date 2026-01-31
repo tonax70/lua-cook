@@ -1,9 +1,17 @@
 program doc
     use utils;
     implicit none;
+    print *, "Choose sources to view: ";
+    read source;
 
-    call docPrint("My first lua test program", "./helloLua/cs.txt");
-    call docPrint("Lua cheatsheet", "./helloLua/cs.txt");
+    select case(source)
+    case (1)
+    call docPrint("My first lua test program", "../helloLua/cs.txt");
+    call docPrint("Lua cheatsheet", "../helloLua/cs.txt");
+
+    case default 
+    print *, "invalid case, exit.";
+    end select
     
     contains
     subroutine docPrint (heading, path) 
