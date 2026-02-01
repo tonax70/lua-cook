@@ -6,5 +6,8 @@
     - install love
     - install vscode extensions: love support
     - alt + l to run project
+2. first game - shootingGal
+    - strt basic
+    - basic love funcs load update draw
 
 
