@@ -2,15 +2,26 @@ local love = require("love");
 
 
 function love.load()
-    local red = {};
-    local green = {};
-    local blue= {};
+    red = {};
+    green = {};
+    blue= {};
+    orange= {};
+    senko={};
 end
 
 function love.update(dt)
 red = {1,0,0};
 green = {0,1,0};
 blue= {0,0,1};
+orange={1,0.4,0};
+
+--but we cant use direct rgb here like in css (255,255,255)
+-- we need to divide each values to 255 to translate it into 0-1 scale
+-- here is an example of senko's hair color code #FCB001
+-- rgb(252, 176, 1)
+
+senko={252/255, 176/255, 1/255}; -- translate from 255 scale to 1 scale
+
 end
 
 
@@ -18,7 +29,7 @@ function love.draw()
     --add colors
     -- color can be created by some precent of red, green and blue, that's why we have rgb colors
     --rgb (pretty much like css) 0= none of that color, 1= as much as possible
-    love.graphics.setColor(red);
+    love.graphics.setColor(senko);
 
     --basic shapes
     --rectangle (type, cord-x, cord-y, width, height)
