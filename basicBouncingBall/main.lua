@@ -7,6 +7,7 @@ function love.load()
     ball.radius=0;
     speed=500;
     isHitx=0;
+    isHity=0;
 end
 
 function love.update(dt) 
@@ -22,8 +23,20 @@ function love.update(dt)
         ball.x = ball.x - speed * dt;
         if (ball.x <= 0) then
             isHitx=0;
-        end
+        end 
     end
+ 
+    if (ball.y <= love.graphics.getHeight() and isHity == 0) then
+        ball.y = ball.y + speed * dt;
+        if (ball.y >= love.graphics.getHeight()) then 
+            isHity = 1;
+        end  
+    elseif (isHity==1) then
+        ball.y = ball.y - speed * dt;
+        if (ball.y <= 0) then
+            isHity=0;
+        end
+    end 
     
 end
 
