@@ -6,22 +6,22 @@ function love.load()
     ball.y = 0;
     ball.radius=0;
     speed=500;
-    isHit=0;
+    isHitx=0;
 end
 
-function love.update(dt)
+function love.update(dt) 
     ball.radius=20;
 
     -- check logic.ts
-    if (ball.x <= love.graphics.getWidth() and isHit == 0) then
+    if (ball.x <= love.graphics.getWidth() and isHitx == 0) then
         ball.x = ball.x + speed * dt;
         if (ball.x >= love.graphics.getWidth()) then 
-            isHit = 1;
+            isHitx = 1;
         end
-    elseif (isHit==1) then
+    elseif (isHitx==1) then
         ball.x = ball.x - speed * dt;
         if (ball.x <= 0) then
-            isHit=0;
+            isHitx=0;
         end
     end
     
