@@ -6,39 +6,43 @@ local love = require("love");
 -- for more effecient way that including velocity, refer to basicImprovedBall
 
 function love.load()
+    radius = 20;
     ball = {};
-    ball.x = 1;
-    ball.y = 0;
-    ball.radius=0;
+    ball.x = radius
+    ball.y = radius;
+    ball.radius=radius;
     speed=500;
     isHitx=0;
     isHity=0;
 end
 
 function love.update(dt) 
-    ball.radius=20;
 
     -- check logic.ts
-    if (ball.x <= love.graphics.getWidth() and isHitx == 0) then
+    if (ball.x <= love.graphics.getWidth() - ball.radius and isHitx == 0) then
         ball.x = ball.x + speed * dt;
-        if (ball.x >= love.graphics.getWidth()) then 
+        if (ball.x >= love.graphics.getWidth() - ball.radius ) then 
+            ball.x = love.graphics.getWidth() - ball.radius;
             isHitx = 1;
         end
     elseif (isHitx==1) then
         ball.x = ball.x - speed * dt;
         if (ball.x <= 0) then
+            ball.x = ball.radius;
             isHitx=0;
         end 
     end
  
-    if (ball.y <= love.graphics.getHeight() and isHity == 0) then
+    if (ball.y <= love.graphics.getHeight() - ball.radius  and isHity == 0) then
         ball.y = ball.y + speed * dt;
-        if (ball.y >= love.graphics.getHeight()) then 
+        if (ball.y >= love.graphics.getHeight() - ball.radius ) then 
+            ball.y = love.graphics.getHeight() - ball.radius;
             isHity = 1;
         end  
     elseif (isHity==1) then
         ball.y = ball.y - speed * dt;
         if (ball.y <= 0) then
+            ball.y = ball.radius;
             isHity=0;
         end
     end 
