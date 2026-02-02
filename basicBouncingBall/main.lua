@@ -27,7 +27,7 @@ function love.update(dt)
         end
     elseif (isHitx==1) then
         ball.x = ball.x - speed * dt;
-        if (ball.x <= 0) then
+        if (ball.x <= ball.radius) then
             ball.x = ball.radius;
             isHitx=0;
         end 
@@ -41,7 +41,7 @@ function love.update(dt)
         end  
     elseif (isHity==1) then
         ball.y = ball.y - speed * dt;
-        if (ball.y <= 0) then
+        if (ball.y <= ball.radius) then
             ball.y = ball.radius;
             isHity=0;
         end
