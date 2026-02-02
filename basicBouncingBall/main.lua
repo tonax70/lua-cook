@@ -1,5 +1,10 @@
 local love = require("love");
 
+
+-- this uses flags instad of the velocity itself
+-- will be harder to add more simulation metric like gravity erc.
+-- for more effecient way that including velocity, refer to basicImprovedBall
+
 function love.load()
     ball = {};
     ball.x = 1;

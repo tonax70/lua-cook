@@ -1,5 +1,5 @@
 let isHit = 0;
-let x = 0;
+let  x = 0;
 const viewWidth = 10;
 
 const interval = setInterval(() => {
@@ -19,3 +19,18 @@ else if isHit==1 then decrement by 1 and check if x <= 0 then set isHit=0;
 
   console.log(x);
 }, 300);
+
+/*
+current mental model (math / CS)
+“If state A, do this.
+If state B, do that.”
+That leads to:
+flags (isHit)
+branches
+special cases
+Totally fine for:
+algorithms
+proofs
+parsers
+competitive programming
+*/
