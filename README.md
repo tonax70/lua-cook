@@ -11,5 +11,5 @@
     - basic love funcs load update draw
     - set color based on the scale from 0 to 1
     -  basic loop : bouncing ball prac
-
-
+    - improved bouncing ball
+    
