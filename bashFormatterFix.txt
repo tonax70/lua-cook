@@ -1,0 +1,17 @@
+
+# Bash formatter VS code extension bug solved
+# how can I downgrade this extension?
+# https://github.com/foxundermoon/vs-shell-format/issues/295
+
+# Based on the GitHub issue you linked (and related recent reports), the latest version of the extension (v7.2.8) has a packaging bug where a necessary file (one_ini_bg.wasm) is missing, causing the formatter to fail.
+# The solution confirmed by the community is to downgrade to version 7.2.5.
+# How to Downgrade in VS Code
+# Open VS Code.[1][2][3][4]
+# Click on the Extensions icon in the Activity Bar on the side (or press Ctrl+Shift+X / Cmd+Shift+X).[1][2]
+# Find shell-format (by foxundermoon) in your list of installed extensions.[1][2][3]
+# Click the Gear icon ⚙️ (Manage) next to the extension's name or the "Uninstall" button in the main window.[2]
+# Select "Install Specific Version..." from the dropdown menu.[1][2]
+# Scroll down and select 7.2.5 from the list.[1]
+# Once the installation finishes, click Reload Required (or restart VS Code).[1][2]
+# This version is stable and should restore the formatting functionality immediately. You may want to avoid updating this specific extension until a version higher than 7.2.8 is released.[1][2] 
+
