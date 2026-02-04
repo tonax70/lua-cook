@@ -6,10 +6,10 @@
     - install love
     - install vscode extensions: love support
     - alt + l to run project
-2. first game - shootingGal
+2. first physics - bouncing ball thing
     - strt basic
     - basic love funcs load update draw
     - set color based on the scale from 0 to 1
     -  basic loop : bouncing ball prac
     - improved bouncing ball
-    
+3. first lua game - shootingGal
