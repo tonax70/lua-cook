@@ -14,3 +14,5 @@
     - improved bouncing ball
 3. first lua game - shootingGal
     - mouse listener love.mousepressed
+    - compare distance with radius is more effective in case the object is a circle
+    - legacy code : compare mouse within range or not

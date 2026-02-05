@@ -29,7 +29,15 @@ end
 
 -- istouch true if using a touch screen touch press
 function love.mousepressed(x,y,button,istouch,pressed)
-if (button == 1 and (x < target.x + target.radius and x > target.x - target.radius) and (y < target.y + target.radius and y > target.y - target.radius)) then
-score = score + 1
+
+-- legacy logic, check if it is within the rage of the square
+--    if (button == 1 and (x < target.x + target.radius and x > target.x - target.radius) and (y < target.y + target.radius and y > target.y - target.radius)) then
+-- better logic: check if the distance from the mouse to the center ot the circle is smaller than the radius or not
+    if (button == 1 and distanceBetween(x,target.x,y,target.y) <= target.radius) then
+        score = score + 1
+    end
 end
+
+function distanceBetween(x1, x2, y1, y2)
+    return math.sqrt((x2-x1)^2 + (y2-y1)^2);
 end
