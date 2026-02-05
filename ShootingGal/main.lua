@@ -29,7 +29,7 @@ end
 
 -- istouch true if using a touch screen touch press
 function love.mousepressed(x,y,button,istouch,pressed)
-if (button == 1) then
+if (button == 1 and (x < target.x + target.radius and x > target.x - target.radius) and (y < target.y + target.radius and y > target.y - target.radius)) then
 score = score + 1
 end
 end
