@@ -13,3 +13,4 @@
     -  basic loop : bouncing ball prac
     - improved bouncing ball
 3. first lua game - shootingGal
+    - mouse listener love.mousepressed
