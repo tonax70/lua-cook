@@ -24,6 +24,9 @@ program doc
     call docPrint("new bouncing ball logic", "./basicBouncingBall/logicImproved.ts");
     call docPrint("new bouncing ball code", "./basicImprovedBall/main.lua");
 
+    case ('6')
+    call docPrint("Shooting gallery", "./ShootingGal/main.lua");
+
     
     case default 
     print *, "invalid case, exit.";
