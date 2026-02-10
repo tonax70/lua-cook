@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 
 OPTION="y"
-
+README () {
+    cat "./README.md"
+}
 FORMATTER_FIX () {
         cat "./bashFormatterFix.txt"
 }
@@ -30,6 +32,7 @@ EXECUTE_LOOP() {
 if [[ $1 == "verbose" ]]; then
     if [[ $1 == "verbose" && $2 == "full" ]]; then
         echo "Welcome to tonax's code viewer and inspector!"
+        README
         FORMATTER_FIX
         MENU
         EXECUTE_PROG
