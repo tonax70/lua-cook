@@ -16,6 +16,7 @@ function love.load()
         bg = love.graphics.newImage('/sprites/Aerial_Microsoft_West_Campus_August_2009.jpg');
         win7 = love.graphics.newImage('/sprites/win7.png');
         cursor = love.graphics.newImage('/sprites/mouse-cursor-symbol-on-transparent-background-free-png.png');
+        blackgradient70 = love.graphics.newImage("/sprites/blackbg-70percent.png");
 
     };
     love.mouse.setVisible(false);
@@ -31,7 +32,11 @@ if (timer < 0) then timer = 0 end
 end
 
 function love.draw() 
+    -- draw and adjust background
     love.graphics.draw(sprites.bg,0,0,0,0.17,0.18);
+
+    -- draw black gradient to make scores and info appear better
+    love.graphics.draw(sprites.blackgradient70,0,0,0,2,0.17);
 
     love.graphics.circle("fill", target.x, target.y, target.radius);
     love.graphics.setFont(gameFont);
