@@ -7,7 +7,7 @@ function love.load()
     target.radius = 50;
     score = 0;
     timer = 0;
-    gameFont = love.graphics.newFont(30);
+    gameFont = love.graphics.newFont('/fonts/Anonymous.ttf', 30);
     timer = 10;
 
     -- import sprites via file path
@@ -40,8 +40,8 @@ function love.draw()
 
     love.graphics.circle("fill", target.x, target.y, target.radius);
     love.graphics.setFont(gameFont);
-    love.graphics.print("Score: " .. score, 0, 0);
-    love.graphics.print("Timer: "..math.ceil(timer),500, 0); -- ceiling and floor works just like javascript
+    love.graphics.print("Score: " .. score, 3, 3);
+    love.graphics.print("Timer: "..math.ceil(timer),500, 3); -- ceiling and floor works just like javascript
     
     -- use sprites 
 
