@@ -20,6 +20,8 @@ function love.load()
 
     };
     love.mouse.setVisible(false);
+
+    gameState = 1;
 end
 
 function love.update(dt)

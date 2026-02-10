@@ -16,3 +16,5 @@
     - mouse listener love.mousepressed
     - compare distance with radius is more effective in case the object is a circle
     - legacy code : compare mouse within range or not
+    - randomize target - math.random
+    - render sprites love.graphics.newImage() and love.graphics.draw()
