@@ -8,17 +8,39 @@ function love.load()
     score = 0;
     timer = 0;
     gameFont = love.graphics.newFont(30);
+    timer = 10;
+
+    -- import sprites via file path
+    sprites = {
+
+        bg = love.graphics.newImage('/sprites/Aerial_Microsoft_West_Campus_August_2009.jpg');
+        windows95 = love.graphics.newImage('/sprites/Windows_Logo_(1992-2001).svg.png');
+        cursor = love.graphics.newImage('/sprites/mouse-cursor-symbol-on-transparent-background-free-png.png');
+
+    };
+    love.mouse.setVisible(false);
 end
 
 function love.update(dt)
+-- notice that love runs loop every frames (60fps) so it will loop 60fps
+if (timer > 0) then timer = timer - dt end
+
+-- prevent timer less than 0 issue
+if (timer < 0) then timer = 0 end
 
 end
 
-function love.draw() -- {
+function love.draw() 
     love.graphics.circle("fill", target.x, target.y, target.radius);
     love.graphics.setFont(gameFont);
     love.graphics.print("Score: " .. score, 0, 0);
-    --}
+    love.graphics.print("Timer: "..math.ceil(timer),500, 0); -- ceiling and floor works just like javascript
+    
+    -- use sprites 
+
+    -- draw cursor at mouse position
+    -- set offset and scale
+    love.graphics.draw(sprites.cursor, love.mouse.getX()-27, love.mouse.getY()-20, 0, 0.2, 0.2);
 end
 
 -- 1 is primary mouse button > left click
