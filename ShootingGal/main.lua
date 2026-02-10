@@ -14,7 +14,7 @@ function love.load()
     sprites = {
 
         bg = love.graphics.newImage('/sprites/Aerial_Microsoft_West_Campus_August_2009.jpg');
-        windows95 = love.graphics.newImage('/sprites/Windows_Logo_(1992-2001).svg.png');
+        win7 = love.graphics.newImage('/sprites/win7.png');
         cursor = love.graphics.newImage('/sprites/mouse-cursor-symbol-on-transparent-background-free-png.png');
 
     };
@@ -31,12 +31,17 @@ if (timer < 0) then timer = 0 end
 end
 
 function love.draw() 
+    love.graphics.draw(sprites.bg,0,0,0,0.17,0.18);
+
     love.graphics.circle("fill", target.x, target.y, target.radius);
     love.graphics.setFont(gameFont);
     love.graphics.print("Score: " .. score, 0, 0);
     love.graphics.print("Timer: "..math.ceil(timer),500, 0); -- ceiling and floor works just like javascript
     
     -- use sprites 
+
+    -- draw the windows95 target - should be on top of cursor draw for higher z index
+    love.graphics.draw(sprites.win7, target.x-target.radius-8, target.y-target.radius-1.8, 0, 0.13, 0.13);
 
     -- draw cursor at mouse position
     -- set offset and scale
